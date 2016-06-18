@@ -4,14 +4,16 @@
   <title>E-commerce</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Barra de navegación -->
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menu">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -26,9 +28,13 @@
       </div>
     </div>
   </nav>
+
+  <!-- Contenido -->
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-3">
+
+        <!-- Buscador -->
         <form class="nav-form" role="search">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Buscar camisetas"></input>
@@ -37,6 +43,8 @@
             </div>
           </div>
         </form>
+
+        <!-- Categorias con badges -->
         <h3 class="hidden-xs hidden-sm">Categorias</h3>
         <div class="list-group hidden-xs hidden-sm">
           <a href="#"class="list-group-item active">Todos<span class="badge">100</span></a>
@@ -50,6 +58,8 @@
           <a href="#"class="list-group-item">Apretada<span class="badge">19</span></a>
         </div>
       </div>
+
+      <!-- Carrousel de fotos -->
       <div class="col-xs-12 col-md-9">
         <div id="photoCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -77,62 +87,53 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-4 col-md-4">
-            <div class="thumbnail">
-              <a href="#"><img src="images/camiseta-1.jpg" alt="Hipster Ultimate"></a>
-              <div class="description">
-                <h4><strong>Hipster Ultimate</strong></h4>
-                <p>La camiseta ideal para hipsters</p>
-                <a class="btn btn-primary" href="#">$229<span class="glyphicon glyphicon-shopping-cart"></span></a>
-                <a class="btn btn-default" data-toggle="modal" data-target="#infoModal" href="#" role="button">Detalles</a>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel">
-            <div class="modal-dialog" role="document">
-              <div>
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="infoModalLabel">Hipster Ultimate</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign"></span> Este producto está agotado.</div>
-                    <div class="row">
-                      <div class="col-xs-6">
-                        <div class="thumbnail">
-                          <img src="images/camiseta-1.jpg" alt="Hipster Ultimate">
-                        </div>
-                      </div>
-                      <div class="col-xs-6">
-                        <p>Precio: <strong>$299</strong></p>
-                        <p>Calificación: <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></p>
-                        <p><span class="label label-warning">Hipster</span> <span class="label label-default">Deportiva</span></p>
-                        <p><a href="#"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</a></p>
-                      </div>
-                        <div class="col-xs-12">
-                          <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                              <li role="presentation" class="active"><a href="#shirtDetails" aria-controls="shirtDetails" role="tab" data-toggle="tab">Descripción</a></li>
-                              <li role="presentation"><a href="#shirtComments" aria-controls="shirtComments" role="tab" data-toggle="tab">Comentarios</a></li>
-                            </ul>
 
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                              <div role="tabpanel" class="tab-pane active" id="shirtDetails"><p>Lorem ipsum dolor sit amet, et sea debitis adipiscing, ex choro copiosae appellantur vis. Populo aperiam salutandi nec an, at laudem dolorum suscipiantur vix, utinam quodsi verear ei mei. Docendi oportere ne eam.</p></div>
-                              <div role="tabpanel" class="tab-pane" id="shirtComments">
-                                <div class="panel panel-default">
-                                  <div class="panel-heading">María Fernanda Giraldo comentó hace 2 días</div>
-                                  <div class="panel-body">
-                                    No me gustan estas camisetas.
-                                  </div>
-                                </div>
-                                <form>
-                                  <textarea class="form-control" rows="3" placeholder="Ingresa tu Comentario"></textarea>
-                                </form>
+        <!-- Modal detalles primer producto -->
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel">
+          <div class="modal-dialog" role="document">
+            <div>
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="infoModalLabel">Hipster Ultimate</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign"></span> Este producto está agotado.</div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div class="thumbnail">
+                        <img src="images/camiseta-1.jpg" alt="Hipster Ultimate">
+                      </div>
+                    </div>
+                    <div class="col-xs-6">
+                      <p>Precio: <strong>$299</strong></p>
+                      <p>Calificación: <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                      <p><span class="label label-warning">Hipster</span> <span class="label label-default">Deportiva</span></p>
+                      <p><a href="#"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</a></p>
+                    </div>
+                      <div class="col-xs-12">
+
+                        <!-- Nav tabs modal -->
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li role="presentation" class="active"><a href="#shirtDetails" aria-controls="shirtDetails" role="tab" data-toggle="tab">Descripción</a></li>
+                          <li role="presentation"><a href="#shirtComments" aria-controls="shirtComments" role="tab" data-toggle="tab">Comentarios</a></li>
+                        </ul>
+
+                        <!-- Tab panes modal -->
+                        <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane active" id="shirtDetails"><p>Lorem ipsum dolor sit amet, et sea debitis adipiscing, ex choro copiosae appellantur vis. Populo aperiam salutandi nec an, at laudem dolorum suscipiantur vix, utinam quodsi verear ei mei. Docendi oportere ne eam.</p></div>
+                          <div role="tabpanel" class="tab-pane" id="shirtComments">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">María Fernanda Giraldo comentó hace 2 días</div>
+                              <div class="panel-body">
+                                No me gustan estas camisetas.
                               </div>
                             </div>
+                            <form>
+                              <textarea class="form-control" rows="3" placeholder="Ingresa tu Comentario"></textarea>
+                            </form>
+                          </div>
+                        </div>
                         </div>
                       </div>
                     </div>
@@ -145,46 +146,70 @@
           </div>
             
           </div>
+
+        <!-- Thumbnails camisetas -->
+
+        <!-- Camiseta 1 -->
+        <div class="row">
+          <div class="col-xs-6 col-sm-4 col-md-4">
+            <div class="thumbnail">
+              <a href="#"><img src="images/camiseta-1.jpg" alt="Hipster Ultimate"></a>
+              <div class="description">
+                <h4><strong>Hipster Ultimate</strong></h4>
+                <p>La camiseta ideal para hipsters</p>
+                <a class="btn btn-primary" href="#">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn btn-default" data-toggle="modal" data-target="#infoModal" href="#" role="button">Detalles</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Camiseta 2 -->
           <div class="col-xs-6 col-sm-4 col-md-4">
             <div class="thumbnail">
               <a href="#"><img src="images/camiseta-2.jpg" alt="On Motion Live"></a>
               <div class="description">
                 <h4><strong>On Motion Live</strong></h4>
-                <p>Perfecta para salidas rocosas</p>
-                <a class="btn btn-primary" href="#">$229<span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <p>Perfecta para cualquier salida rocosa</p>
+                <a class="btn btn-primary" href="#">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn btn-default" href="#" role="button">Detalles</a>
               </div>
             </div>
           </div>
+
+          <!-- Camiseta 3 -->
           <div class="col-xs-6 col-sm-4 col-md-4">
             <div class="thumbnail">
               <a href="#"><img src="images/camiseta-3.jpg" alt="Underground Max"></a>
               <div class="description">
                 <h4><strong>Underground Max</strong></h4>
                 <p>Para los amantes del underground</p>
-                <a class="btn btn-primary" href="#">$229<span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn btn-primary" href="#">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn btn-default" href="#" role="button">Detalles</a>
               </div>
             </div>
           </div>
+
+          <!-- Camiseta 4 -->
           <div class="col-xs-6 col-sm-4 col-md-4">
             <div class="thumbnail">
               <a href="#"><img src="images/camiseta-4.jpg" alt="Santo Domingo Tigers"></a>
               <div class="description">
                 <h4><strong>Santo Domingo Tigers</strong></h4>
                 <p>En honor a este gran equipo</p>
-                <a class="btn btn-primary" href="#">$229<span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn btn-primary" href="#">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn btn-default" href="#" role="button">Detalles</a>
               </div>
             </div>
           </div>
+
+          <!-- Camiseta 5 -->
           <div class="col-xs-6 col-sm-4 col-md-4">
             <div class="thumbnail">
               <a href="#"><img src="images/camiseta-5.jpg" alt="Una camiseta más"></a>
               <div class="description">
                 <h4><strong>Una camiseta más</strong></h4>
                 <p>Siempre sobra algo tan poco cool</p>
-                <a class="btn btn-primary" href="#">$229<span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn btn-primary" href="#">$229 <span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn btn-default" href="#" role="button">Detalles</a>
               </div>
             </div>
