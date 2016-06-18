@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.nav-form {
+  margin-bottom: 22px;
+}
+
+.description {
+  padding: 10px;
+}
+
+#photoCarousel {
+  margin-bottom: 22px;
+}
+
+.tab-pane {
+  margin-top: 15px;
+}
